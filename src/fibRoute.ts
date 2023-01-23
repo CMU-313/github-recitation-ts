@@ -17,4 +17,5 @@ app.get('/', (req: Request, res: Response) => {
 
   res.send(result);
 });
+app.listen(3000, () => console.log('server started'));
 
