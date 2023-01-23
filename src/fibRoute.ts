@@ -2,8 +2,8 @@
 
 import fibonacci = require("./fib");
 
-export default (req: { params: string; }, res: { send: (arg0: string) => void; }) => {
-  const num : string = req.params;
+export default (req: { params: { num: string; }; }, res: { send: (arg0: string) => void; }) => {
+  const num : string = req.params.num;
 
   const fibN = fibonacci(parseInt(num));
   let result = `fibonacci(${num}) is ${fibN}`;
