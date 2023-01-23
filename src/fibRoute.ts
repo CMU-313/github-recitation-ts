@@ -1,11 +1,8 @@
 
 import fibonacci from "./fib";
-
-import express from 'express';
 import {Request, Response} from 'express';
 
-const app = express();
-app.get('/', (req: Request, res: Response) => {
+export default (req: Request, res: Response) => {
   const {num} = req.params;
 
   const fibN : number = fibonacci(parseInt(num));
@@ -16,6 +13,6 @@ app.get('/', (req: Request, res: Response) => {
   }
 
   res.send(result);
-});
-app.listen(3000, () => console.log('server started'));
+};
+
 
