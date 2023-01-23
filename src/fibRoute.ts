@@ -1,6 +1,11 @@
 // Endpoint for querying the fibonacci numbers
+// Endpoint for querying the fibonacci numbers
+import express, {Request, Response} from 'express';
 
-const fibonacci = require("./fib");
+
+
+
+const fibonacci = express();
 
 export default (req, res) => {
   const { num } = req.params;
@@ -12,5 +17,7 @@ export default (req, res) => {
     result = `fibonacci(${num}) is undefined`;
   }
 
+
   res.send(result);
+
 };
