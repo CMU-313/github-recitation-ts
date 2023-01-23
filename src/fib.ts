@@ -7,6 +7,10 @@ module.exports = function fibonacci(n) {
   } else if (n == 1) {
     return 1;
   }
+  
+  var result1:number= fibonacci(n-1);
+  var result2:number= fibonacci(n-2);
 
-  return fibonacci(n - 1) + fibonacci(n - 2);
+
+  return result1 + result2;
 };
