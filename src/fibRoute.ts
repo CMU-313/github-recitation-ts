@@ -2,8 +2,8 @@
 
 import fibonacci from "./fib";
 
-export default (req: { params: { num: any; }; }, res: { send: (arg0: string) => void; }) => {
-  const { num } = req.params;
+export default (req, res) => {
+  const num: string = req.params;
 
   const fibN = fibonacci(parseInt(num));
   let result = `fibonacci(${num}) is ${fibN}`;
