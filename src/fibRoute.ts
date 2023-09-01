@@ -1,8 +1,9 @@
 // Endpoint for querying the fibonacci numbers
+//via ChatGPT
+import { Request, Response } from 'express';
+import fibonacci from './fib';
 
-import fibonacci from "./fib";
-
-export default (req, res) => {
+export default (req: Request, res: Response): void => {
   const { num } = req.params;
 
   const fibN = fibonacci(parseInt(num));
@@ -14,3 +15,4 @@ export default (req, res) => {
 
   res.send(result);
 };
+
